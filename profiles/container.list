@@ -1,0 +1,19 @@
+# Perfil container: subconjunto seguro para CI/smoke test.
+# Sem GUI, sem systemd, sem flatpak e sem PPA.
+#
+# Use com:
+#   bin/bootstrap --profile container --skip-fonts --skip-runtimes --skip-nvim --yes
+
+git
+openssh
+fish
+starship
+neovim
+tmux
+fzf
+zoxide
+eza
+bat
+yazi
+lazygit
+opencode

@@ -1,0 +1,2 @@
+# opencode (sem auth/tokens)
+.config/opencode/opencode.jsonc

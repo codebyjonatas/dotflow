@@ -1,0 +1,9 @@
+# ~/.config/yazi/yazi.toml
+[mgr]
+ratio = [1, 3, 4]
+show_hidden = false
+linemode = "size"
+
+[preview]
+max_width = 1000
+max_height = 1000

@@ -1,0 +1,6 @@
+# Fontes instaladas no usuario (~/.local/share/fonts), independente de distro.
+# Formato: familia<TAB>arquivo<TAB>licenca<TAB>url
+# version=3.3.0
+CaskaydiaCove Nerd Font Mono	CaskaydiaCove.zip	OFL-1.1	https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CaskaydiaCove.zip
+FiraCode Nerd Font Mono	FiraCode.zip	OFL-1.1	https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraCode.zip
+FantasqueSansM Nerd Font Mono	FantasqueSansMono.zip	OFL-1.1	https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FantasqueSansMono.zip

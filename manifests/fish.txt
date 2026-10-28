@@ -1,0 +1,4 @@
+# fish - config e modulos
+.config/fish/config.fish
+.config/fish/conf.d/10-mise.fish
+.config/fish/conf.d/20-abbr.fish

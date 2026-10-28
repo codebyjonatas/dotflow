@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bin/capture - snapshot do sistema para triagem; nao altera o repo.
+set -euo pipefail
+DOTFLOW_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+export DOTFLOW_ROOT
+DOTFLOW_VERSION=$(<"$DOTFLOW_ROOT/VERSION")
+export DOTFLOW_VERSION
+
+for _lib in log platform registry backup stow fonts shell nvim setup doctor verify capture reminder engine; do
+  # shellcheck disable=SC1090
+  . "$DOTFLOW_ROOT/lib/${_lib}.sh"
+done
+unset _lib
+
+DOTFLOW_DRY_RUN=0
+detect_platform
+capture_main

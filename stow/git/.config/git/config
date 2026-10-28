@@ -1,0 +1,30 @@
+# ~/.config/git/config
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+	pager = less -FRX
+	excludesFile = ~/.config/git/ignore
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autosquash = true
+
+[alias]
+	st = status -sb
+	lg = log --oneline --graph --decorate
+	last = log -1 HEAD
+	unstage = restore --staged
+
+# Identidade e overrides de maquina (nao versionado):
+[include]
+	path = config.local

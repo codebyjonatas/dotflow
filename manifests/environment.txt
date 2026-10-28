@@ -1,0 +1,2 @@
+# environment.d - EDITOR/VISUAL para sessoes systemd
+.config/environment.d/10-dotflow.conf

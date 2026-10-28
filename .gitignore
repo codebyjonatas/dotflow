@@ -1,0 +1,33 @@
+# Estado local e artefatos de execucao
+capture/
+backups/
+state/
+*.log
+
+# Segredos que nunca devem entrar no repo
+.netrc
+auth.json
+hosts.yml
+.ssh/id_*
+.ssh/known_hosts
+*.pem
+*.key
+*.p12
+.gnupg/
+.env
+.env.*
+
+# Config local de maquina (identidade git, overrides)
+config.local
+*.local
+!docs/*.local.md
+
+# Dependencias e caches
+node_modules/
+.cache/
+__pycache__/
+*.pyc
+
+# Editores
+.DS_Store
+*.swp

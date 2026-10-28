@@ -1,0 +1,15 @@
+# ~/.config/lazygit/config.yml
+gui:
+  nerdFontsVersion: "3"
+  showFileTree: true
+  theme:
+    activeBorderColor:
+      - green
+      - bold
+    inactiveBorderColor:
+      - default
+    selectedLineBgColor:
+      - blue
+git:
+  autoFetch: true
+  fetchAll: false

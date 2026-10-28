@@ -1,0 +1,13 @@
+# ~/.config/git/ignore - padroes globais
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example

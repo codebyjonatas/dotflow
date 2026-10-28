@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint + shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint estrutural
+        run: bash tests/lint.sh
+
+      - name: Shellcheck
+        run: |
+          docker run --rm \
+            -v "$PWD":/mnt \
+            -w /mnt \
+            koalaman/shellcheck:stable \
+            --severity=error --shell=bash -x \
+            bin/* lib/*.sh tests/*.sh registry/tools/*.sh install.sh

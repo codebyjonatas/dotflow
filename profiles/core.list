@@ -1,0 +1,25 @@
+# Perfil core: ferramentas diarias, agnosticas de distro e de DE/WM.
+# Ordem aqui nao importa; o engine aplica prioridade (mise, git, fish...).
+
+mise
+git
+openssh
+fish
+starship
+neovim
+tmux
+fzf
+zoxide
+eza
+bat
+yazi
+ghostty
+lazygit
+docker
+lazydocker
+opencode
+leaf
+tailscale
+bitwarden
+gh
+bitwarden-app

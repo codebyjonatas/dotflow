@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# bin/unstow - remove os links gerenciados (nao apaga backups nem configs reais).
+set -euo pipefail
+DOTFLOW_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+export DOTFLOW_ROOT
+DOTFLOW_VERSION=$(<"$DOTFLOW_ROOT/VERSION")
+export DOTFLOW_VERSION
+
+for _lib in log platform registry backup stow fonts shell nvim setup doctor verify capture reminder engine; do
+  # shellcheck disable=SC1090
+  . "$DOTFLOW_ROOT/lib/${_lib}.sh"
+done
+unset _lib
+
+engine_parse_args "$@"
+detect_platform
+
+if [[ -n ${DOTFLOW_ONLY:-} ]]; then
+  IFS=',' read -r -a TOOLS <<<"$DOTFLOW_ONLY"
+else
+  mapfile -t TOOLS < <(engine_selected_tools)
+fi
+
+rc=0
+for id in "${TOOLS[@]}"; do
+  stow_pkg_exists "$id" || continue
+  stow_remove "$id" || { err "falha ao remover $id"; rc=1; }
+done
+exit $rc

@@ -1,0 +1,2 @@
+# ssh (somente config; chaves nunca)
+.ssh/config

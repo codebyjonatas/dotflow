@@ -1,0 +1,7 @@
+# ~/.config/mise/config.toml - runtimes pinados pelo dotflow
+[tools]
+node = "26"
+rust = "stable"
+java = "27"
+postgres = "18"
+ruby = "4.0"

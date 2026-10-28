@@ -1,0 +1,7 @@
+# Perfil wm-hyprland: reservado para configs de Hyprland.
+# Nao inclua nada aqui que quebre em outro WM.
+#
+# Candidatos futuros:
+#   hyprland.conf, hyprpaper.conf, hypridle.conf, hyprlock.conf, waybar/
+#
+# Regra: keybinds e monitores sao especificos de maquina; use includes locais.

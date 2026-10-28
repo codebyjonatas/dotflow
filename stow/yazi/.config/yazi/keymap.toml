@@ -1,0 +1,7 @@
+# ~/.config/yazi/keymap.toml
+# Overrides ficam aqui; os defaults do yazi continuam valendo.
+# Exemplo:
+# [[mgr.prepend_keymap]]
+# on   = ["g", "h"]
+# run  = "cd ~"
+# desc = "Ir para HOME"

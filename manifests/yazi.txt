@@ -1,0 +1,3 @@
+# yazi
+.config/yazi/yazi.toml
+.config/yazi/keymap.toml

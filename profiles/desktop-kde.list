@@ -1,0 +1,8 @@
+# Perfil desktop-kde: reservado para configs especificas de KDE Plasma.
+# Nao inclua nada aqui que quebre em outro DE.
+#
+# Candidatos futuros (versionar como templates, nao copia cega):
+#   kdeglobals, kwinrc, plasmarc, kglobalshortcutsrc, dolphinrc
+#
+# Regra: estes arquivos contem estado de maquina (telas, dispositivos, atividades).
+# Prefira documentar os ajustes em docs/kde.md a versionar o arquivo inteiro.

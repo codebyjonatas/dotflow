@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bin/apply - aplica dotfiles (e opcionalmente instala com --install).
+set -euo pipefail
+DOTFLOW_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+export DOTFLOW_ROOT
+DOTFLOW_VERSION=$(<"$DOTFLOW_ROOT/VERSION")
+export DOTFLOW_VERSION
+DOTFLOW_SKIP_INSTALL=1
+export DOTFLOW_SKIP_INSTALL
+
+for _lib in log platform registry backup stow fonts shell nvim setup doctor verify capture reminder engine; do
+  # shellcheck disable=SC1090
+  . "$DOTFLOW_ROOT/lib/${_lib}.sh"
+done
+unset _lib
+
+engine_main apply "$@"
